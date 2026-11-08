@@ -128,7 +128,7 @@ async function init() {
     renderer=new THREE.WebGLRenderer({canvas,antialias:false,alpha:false,powerPreference:'high-performance',preserveDrawingBuffer:true});
     renderer.outputColorSpace=THREE.LinearSRGBColorSpace;
     surface=makeSurface();
-    texture=await new THREE.TextureLoader().loadAsync('/garden-reconstructed.jpg');
+    texture=await new THREE.TextureLoader().loadAsync(`${import.meta.env.BASE_URL}garden-reconstructed.jpg`);
     texture.colorSpace=THREE.NoColorSpace;
     texture.minFilter=THREE.LinearMipmapLinearFilter;
     material=new THREE.ShaderMaterial({vertexShader,fragmentShader,depthTest:false,depthWrite:false,uniforms:{

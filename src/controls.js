@@ -29,7 +29,7 @@ export function setupControls({ onChange = () => {}, onPause = () => true, onSou
   ui.innerHTML = `
     <header class="glass-wordmark"><h1>Glass</h1><p>A study in light</p></header>
     <button class="source-button" type="button" aria-label="View the background image" aria-haspopup="dialog">
-      <img src="/source-thumbnail.jpg" alt="Stone sculpture and green foliage" width="76" height="76" draggable="false" />
+      <img src="${import.meta.env.BASE_URL}source-thumbnail.jpg" alt="Stone sculpture and green foliage" width="76" height="76" draggable="false" />
       <span class="source-hint">View source <span aria-hidden="true">↗</span></span>
     </button>
     <div class="glass-toolbar" role="toolbar" aria-label="Scene controls">
@@ -50,7 +50,7 @@ export function setupControls({ onChange = () => {}, onPause = () => true, onSou
     </dialog>
     <dialog class="source-dialog" aria-labelledby="source-title">
       <div class="source-heading"><div><h2 id="source-title">The garden</h2><p>Background reconstructed from the reference</p></div><button type="button" class="icon-button close-source" aria-label="Close background image">${icon('close')}</button></div>
-      <img src="/garden-reconstructed.jpg" alt="A pale stone sculpture behind soft green foliage" draggable="false" />
+      <img src="${import.meta.env.BASE_URL}garden-reconstructed.jpg" alt="A pale stone sculpture behind soft green foliage" draggable="false" />
     </dialog>
     <div class="glass-toast" role="status" aria-live="polite"></div>
   `;
